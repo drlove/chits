@@ -1,3 +1,26 @@
+Updated to run in a container
+
+On Macbook Pro, install Homebrew:
+
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+Then install Multipass via Homebrew:
+
+        brew install --cask multipass
+
+Verify installation:
+
+        multipass --version
+
+Launch an instance of the container
+
+        multipass launch --name test-vm
+
+Log in to the container
+    
+        multipass shell test-vm
+
+
 # Install Method 1
 
 This is the preferred method. It sets up a web server, the database and other required software. It uses git to download the latest version of chits and it also includes a full testing suite which is executed at the end of the installation to ensure that everything worked as expected.
